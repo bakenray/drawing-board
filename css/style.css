@@ -8,4 +8,32 @@
     margin:0;
     padding:0;
   }
-  
+  .actions{
+    position: fixed;
+    top: 50px;
+    left: 50px;
+  }
+  button{
+    width: 120px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px solid #7dab64;
+    background: #fff;
+    box-shadow: 0 4px 12px #acd099;
+    outline:none;
+    cursor: pointer;
+    transition:all .4s;
+  }
+  button:hover{
+    box-shadow: 0 6px 25px #84ab6e;
+  }
+#brush{
+   display: none;
+}
+.actions.on #brush{
+  display:inline-block;
+}
+.actions.on #eraser{
+  display:none;
+}
