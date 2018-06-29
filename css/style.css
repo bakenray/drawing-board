@@ -7,18 +7,21 @@ ol{ list-style: none;}
 body{
   overflow: hidden;
 }
-  #canvas{
+#canvas{
     display: block;
     background:#cbecb9;
     margin:0;
     padding:0;
+    position: fixed;
+    left: 0;
+    right: 0;
   }
-  .actions{
+.actions{
     position: fixed;
     top: 14px;
     left: 16px;
   }
-  .download{
+.download{
     position: fixed;
     top: 12px;
     right: 14px;

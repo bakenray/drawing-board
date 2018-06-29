@@ -1,3 +1,6 @@
+// document.body.ontouchstart =function(xxx){
+//   xxx.preventDefault()
+// } //固定屏幕
 
 var canvas = document.getElementById('canvas')
 var ctx = canvas.getContext('2d')
@@ -5,7 +8,6 @@ var lineWidth = 8
 
 autoSetCanvasSize(canvas)
 listenToMouse(canvas)
-
 
 var eraserEnable = false   //橡皮擦画笔切换
   eraser.onclick=function (){ 
@@ -97,7 +99,6 @@ download.onclick=function(){
   a.target = '_blank'
   a.click()
 }
-
 function listenToMouse(canvas){
   var usingMouse = false //鼠标触发时间默认设置false
   var lastPoint = {'x':undefined,'y':undefined} //鼠标最后点击的点坐标初始化
