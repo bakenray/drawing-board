@@ -10,11 +10,11 @@
   }
   .actions{
     position: fixed;
-    top: 50px;
-    left: 50px;
+    top: 40px;
+    left: 40px;
   }
   button{
-    width: 120px;
+    width: 100px;
     height: 40px;
     font-size: 16px;
     border-radius: 20px;
