@@ -1,7 +1,7 @@
 // document.body.ontouchstart =function(xxx){
 //   xxx.preventDefault()
 // } //固定屏幕
-
+  
 var canvas = document.getElementById('canvas')
 var ctx = canvas.getContext('2d')
 var lineWidth = 8

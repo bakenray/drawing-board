@@ -114,21 +114,31 @@ body{
   left: 18px;
 }
 #line li{
-  width:20px;
-  height:20px;
-  margin:10px 0;
-  transition:all .2s;
+  width: 20px;
+  height: 20px;
+  padding: 10px 0;
+  transition: all .2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #line li.active{
   transform:scale(1.4);
+  padding: 4px 0;
 }
-#line li#big{
-  border-top:6px solid #2e2e2e;
+
+#line li span{
+  width:100%;
+  display:block;
+  background:#2e2e2e;
 }
-#line li#middle{
-  border-top:4px solid #2e2e2e;
+#line li#big span{
+  height:6px;
 }
-#line li#small{
-  border-top:2px solid #2e2e2e;
+#line li#middle span{
+  height:4px;
+}
+#line li#small span{
+  height:2px;
 }
 
