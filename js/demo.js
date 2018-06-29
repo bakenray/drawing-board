@@ -111,7 +111,7 @@ if(document.body.ontouchstart !== undefined){  //判断设备是否支持touch�
     var y =a.touches[0].clientY
     usingMouse = true
     if(eraserEnable){
-      ctx.clearRect(x-10,y-10,20,20);
+      ctx.clearRect(x-25,y-25,50,50);
     }
     else{
       lastPoint = {'x':x,'y':y}
