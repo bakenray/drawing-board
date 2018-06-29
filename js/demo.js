@@ -87,6 +87,17 @@ small.onclick=function(){
   small.classList.add('active')
 }
 
+download.onclick=function(){
+  var url = canvas.toDataURL("image/png")
+  console.log(url)
+  var a = document.createElement('a')
+  document.body.appendChild(a)
+  a.href = url
+  a.download = 'canvas画板.png'
+  a.target = '_blank'
+  a.click()
+}
+
 function listenToMouse(canvas){
   var usingMouse = false //鼠标触发时间默认设置false
   var lastPoint = {'x':undefined,'y':undefined} //鼠标最后点击的点坐标初始化

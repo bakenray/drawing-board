@@ -7,7 +7,6 @@ ol{ list-style: none;}
 body{
   overflow: hidden;
 }
-
   #canvas{
     display: block;
     background:#cbecb9;
@@ -19,12 +18,11 @@ body{
     top: 14px;
     left: 16px;
   }
-  .clearbox{
+  .download{
     position: fixed;
     top: 12px;
     right: 14px;
   }
-
 .icon {
     width: 2.5em; height: 2.5em;
     vertical-align: -0.15em;
@@ -34,12 +32,13 @@ body{
     margin:0 4px;
     transition: all .4s;
  }
+ #clear{
+  width:2.2em;
+  height:2.2em;
+}
 .actions svg.active{
   fill:red;
   transform:scale(1.2);
-}
-.clear{
-  text-align: right;
 }
 #colors{
   position: fixed;
@@ -51,7 +50,7 @@ body{
   height:16px;
   margin:16px 0;
   border-radius: 50%;
-  transition: all .4s;
+  transition: all .25s;
 }
 #colors li#black{
   background:#2d2d2d;
@@ -111,7 +110,7 @@ body{
   width:20px;
   height:20px;
   margin:10px 0;
-  transition:all .4s;
+  transition:all .25s;
 }
 #line li.active{
   transform:scale(1.4);
