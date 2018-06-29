@@ -4,6 +4,10 @@
   }
 ol{ list-style: none;}
 
+body{
+  overflow: hidden;
+}
+
   #canvas{
     display: block;
     background:#cbecb9;
@@ -40,7 +44,11 @@ ol{ list-style: none;}
   border-radius: 50%;
   transition: all .4s;
 }
-
+#colors li#black{
+  background:#2d2d2d;
+  border: 1px solid #101010;
+  box-shadow: 0 2px 5px rgba(0,0,0,.6);
+}
 #colors li#red{
   background:red;
   border: 1px solid #ca0001;
@@ -63,6 +71,10 @@ ol{ list-style: none;}
 }
 #colors li.active{
   transform:scale(1.4);
+}
+#colors li#black.active{
+  border: 2px solid #101010;
+  box-shadow: 0 3px 6px rgba(0,0,0,.6);
 }
 #colors li#red.active{
   border: 2px solid #ca0001;

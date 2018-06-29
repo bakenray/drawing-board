@@ -17,10 +17,19 @@ var eraserEnable = false   //橡皮擦画笔切换
     brush.classList.add('active')
     eraser.classList.remove('active')
 }
-
+black.onclick=function(){
+  ctx.fillStyle = 'black'
+  ctx.strokeStyle = 'black'
+  black.classList.add('active')
+  red.classList.remove('active')
+  yellow.classList.remove('active')
+  green.classList.remove('active')
+  blue.classList.remove('active')
+}
 red.onclick=function(){
   ctx.fillStyle = 'red'
   ctx.strokeStyle = 'red'
+  black.classList.remove('active')
   red.classList.add('active')
   yellow.classList.remove('active')
   green.classList.remove('active')
@@ -29,6 +38,7 @@ red.onclick=function(){
 yellow.onclick=function(){
   ctx.fillStyle = 'yellow'
   ctx.strokeStyle = 'yellow'
+  black.classList.remove('active')
   red.classList.remove('active')
   yellow.classList.add('active')
   green.classList.remove('active')
@@ -37,6 +47,7 @@ yellow.onclick=function(){
 green.onclick=function(){
   ctx.fillStyle = 'green'
   ctx.strokeStyle = 'green'
+  black.classList.remove('active')
   red.classList.remove('active')
   yellow.classList.remove('active')
   green.classList.add('active')
@@ -45,6 +56,7 @@ green.onclick=function(){
 blue.onclick=function(){
   ctx.fillStyle = 'blue'
   ctx.strokeStyle = 'blue'
+  black.classList.remove('active')
   red.classList.remove('active')
   yellow.classList.remove('active')
   green.classList.remove('active')
