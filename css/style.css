@@ -23,8 +23,12 @@ body{
   }
 .download{
     position: fixed;
-    top: 12px;
+    top: 18px;
     right: 14px;
+  }
+  #download{
+    width: 2.0em;
+    height: 2.0em;
   }
 .icon {
     width: 2.5em; height: 2.5em;
@@ -33,7 +37,7 @@ body{
     overflow: hidden;
     padding:2px; 
     margin:0 4px;
-    transition: all .4s;
+    transition: all .3s;
  }
  #clear{
   width:2.2em;
@@ -53,7 +57,7 @@ body{
   height:16px;
   margin:16px 0;
   border-radius: 50%;
-  transition: all .25s;
+  transition: all .2s;
 }
 #colors li#black{
   background:#2d2d2d;
@@ -113,7 +117,7 @@ body{
   width:20px;
   height:20px;
   margin:10px 0;
-  transition:all .25s;
+  transition:all .2s;
 }
 #line li.active{
   transform:scale(1.4);
