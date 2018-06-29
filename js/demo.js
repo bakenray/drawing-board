@@ -9,7 +9,6 @@ function listenToMouse(canvas){
   var usingMouse = false //鼠标触发时间默认设置false
   var lastPoint = {'x':undefined,'y':undefined} //鼠标最后点击的点坐标初始化
   
-
 if(document.body.ontouchstart !== undefined){  //判断设备是否支持touch事件
 
   canvas.ontouchstart = function(a){ //touch开始
@@ -42,7 +41,7 @@ if(document.body.ontouchstart !== undefined){  //判断设备是否支持touch�
     usingMouse = false
   }
 }
-else{                   //如果不支持touch事件，则执行鼠标事件
+else{                                 //如果不支持touch事件，则执行鼠标事件
    canvas.onmousedown = function(a){ //鼠标按下事件
      var x =a.clientX
      var y =a.clientY
@@ -74,8 +73,6 @@ else{                   //如果不支持touch事件，则执行鼠标事件
      usingMouse = false
    }
   }
-
-
 } 
 
 function drawPoint(x,y,radius){
@@ -107,13 +104,14 @@ function autoSetCanvasSize(canvas){ //全屏函数
     canvas.height = pageHeight
   }
 }
-
-var eraserEnable = false 
-  eraser.onclick=function (){
+var eraserEnable = false   //橡皮擦画笔切换
+  eraser.onclick=function (){ 
     eraserEnable = true
-    actions.className= 'actions on'
+    eraser.classList.add('active')
+    brush.classList.remove('active')
 }
   brush.onclick=function (){
-  eraserEnable = false
-  actions.className= 'actions'
+    eraserEnable = false
+    brush.classList.add('active')
+    eraser.classList.remove('active')
 }

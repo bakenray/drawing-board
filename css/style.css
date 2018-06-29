@@ -10,30 +10,19 @@
   }
   .actions{
     position: fixed;
-    top: 40px;
-    left: 40px;
+    top: 20px;
+    left: 20px;
   }
-  button{
-    width: 100px;
-    height: 40px;
-    font-size: 16px;
-    border-radius: 20px;
-    border: 1px solid #7dab64;
-    background: #fff;
-    box-shadow: 0 4px 12px #acd099;
-    outline:none;
-    cursor: pointer;
-    transition:all .4s;
-  }
-  button:hover{
-    box-shadow: 0 6px 25px #84ab6e;
-  }
-#brush{
-   display: none;
-}
-.actions.on #brush{
-  display:inline-block;
-}
-.actions.on #eraser{
-  display:none;
+.icon {
+    width: 2.5em; height: 2.5em;
+    vertical-align: -0.15em;
+    fill: #638a48;
+    overflow: hidden;
+    padding:2px; 
+    margin:0 4px;
+    transition: all .4s;
+ }
+.actions svg.active{
+  fill:red;
+  transform:scale(1.2);
 }

@@ -6,16 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>js实现画板</title>
     <link rel="stylesheet" href="./css/style.css">
+
     <style>
     </style>
 </head>
 <body>
-
+    <!-- <button id="eraser">橡皮擦</button>
+    <button id="brush">画笔</button> -->
     <canvas id="canvas" width="500" height="500"></canvas>
+
     <div id="actions" class="actions">
-        <button id="eraser">橡皮擦</button>
-        <button id="brush">画笔</button>
+        <svg id="brush" class="icon active" aria-hidden="true">
+            <use xlink:href="#icon-brush"></use>
+        </svg>
+
+        <svg id="eraser"class="icon" aria-hidden="true">
+            <use xlink:href="#icon-eraser">橡皮擦</use>
+        </svg>
     </div>
+
 <script src="./js/demo.js"></script>
+<script src="//at.alicdn.com/t/font_727030_frc4itsvfud.js"></script>
 </body>
 </html>
