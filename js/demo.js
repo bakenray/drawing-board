@@ -15,7 +15,7 @@ var eraserEnable = false   //橡皮擦画笔切换
     eraser.classList.add('active')
     brush.classList.remove('active')
 }
-  brush.onclick=function (){
+brush.onclick=function (){
     eraserEnable = false
     brush.classList.add('active')
     eraser.classList.remove('active')
