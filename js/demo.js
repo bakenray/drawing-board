@@ -5,6 +5,52 @@ var ctx = canvas.getContext('2d')
 autoSetCanvasSize(canvas)
 listenToMouse(canvas)
 
+
+var eraserEnable = false   //橡皮擦画笔切换
+  eraser.onclick=function (){ 
+    eraserEnable = true
+    eraser.classList.add('active')
+    brush.classList.remove('active')
+}
+  brush.onclick=function (){
+    eraserEnable = false
+    brush.classList.add('active')
+    eraser.classList.remove('active')
+}
+
+red.onclick=function(){
+  ctx.fillStyle = 'red'
+  ctx.strokeStyle = 'red'
+  red.classList.add('active')
+  yellow.classList.remove('active')
+  green.classList.remove('active')
+  blue.classList.remove('active')
+}
+yellow.onclick=function(){
+  ctx.fillStyle = 'yellow'
+  ctx.strokeStyle = 'yellow'
+  red.classList.remove('active')
+  yellow.classList.add('active')
+  green.classList.remove('active')
+  blue.classList.remove('active')
+}
+green.onclick=function(){
+  ctx.fillStyle = 'green'
+  ctx.strokeStyle = 'green'
+  red.classList.remove('active')
+  yellow.classList.remove('active')
+  green.classList.add('active')
+  blue.classList.remove('active')
+}
+blue.onclick=function(){
+  ctx.fillStyle = 'blue'
+  ctx.strokeStyle = 'blue'
+  red.classList.remove('active')
+  yellow.classList.remove('active')
+  green.classList.remove('active')
+  blue.classList.add('active')
+}
+
 function listenToMouse(canvas){
   var usingMouse = false //鼠标触发时间默认设置false
   var lastPoint = {'x':undefined,'y':undefined} //鼠标最后点击的点坐标初始化
@@ -77,14 +123,12 @@ else{                                 //如果不支持touch事件，则执行�
 
 function drawPoint(x,y,radius){
   ctx.beginPath()
-  ctx.fillStyle = "red"
   ctx.arc(x,y,radius,0,Math.PI*2)
   ctx.fill()
 }
 
 function drawLine(x1,y1,x2,y2){
   ctx.beginPath()
-  ctx.strokeStyle = 'red'
   ctx.moveTo(x1,y1)
   ctx.lineWidth = 6
   ctx.lineTo(x2,y2)
@@ -104,14 +148,4 @@ function autoSetCanvasSize(canvas){ //全屏函数
     canvas.height = pageHeight
   }
 }
-var eraserEnable = false   //橡皮擦画笔切换
-  eraser.onclick=function (){ 
-    eraserEnable = true
-    eraser.classList.add('active')
-    brush.classList.remove('active')
-}
-  brush.onclick=function (){
-    eraserEnable = false
-    brush.classList.add('active')
-    eraser.classList.remove('active')
-}
+

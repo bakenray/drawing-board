@@ -2,6 +2,8 @@
     margin:0;
     padding:0;
   }
+ol{ list-style: none;}
+
   #canvas{
     display: block;
     background:#cbecb9;
@@ -25,4 +27,56 @@
 .actions svg.active{
   fill:red;
   transform:scale(1.2);
+}
+#colors{
+  position: fixed;
+  top: 80px;
+  left: 20px;
+}
+#colors li{
+  width:16px;
+  height:16px;
+  margin:16px 0;
+  border-radius: 50%;
+  transition: all .4s;
+}
+
+#colors li#red{
+  background:red;
+  border: 1px solid #ca0001;
+  box-shadow: 0 2px 5px rgba(255,0,0,.6);
+}
+#colors li#yellow{
+  background:yellow;
+  border: 1px solid #c7c500;
+  box-shadow: 0 2px 5px  rgba(255,255,0,.6);
+}
+#colors li#green{
+  background:green;
+  border: 1px solid #0d5600;
+  box-shadow: 0 2px 5px  rgba(12,91,26,.6);
+}
+#colors li#blue{
+  background:blue;
+  border: 1px solid #001ba5;
+  box-shadow: 0 2px 5px  rgba(129,95,246,.6);
+}
+#colors li.active{
+  transform:scale(1.4);
+}
+#colors li#red.active{
+  border: 2px solid #ca0001;
+  box-shadow: 0 3px 6px rgba(255,0,0,.6);
+}
+#colors li#yellow.active{
+  border: 2px solid #c7c500;
+  box-shadow: 0 3px 6px  rgba(255,255,0,.6);
+}
+#colors li#green.active{
+  border: 2px solid #0d5600;
+  box-shadow: 0 3px 6px  rgba(12,91,26,.6);
+}
+#colors li#blue.active{
+  border: 2px solid #001ba5;
+  box-shadow: 0 3px 6px  rgba(129,95,246,.6);
 }
