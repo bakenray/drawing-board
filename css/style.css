@@ -16,9 +16,15 @@ body{
   }
   .actions{
     position: fixed;
-    top: 20px;
-    left: 20px;
+    top: 14px;
+    left: 16px;
   }
+  .clearbox{
+    position: fixed;
+    top: 12px;
+    right: 14px;
+  }
+
 .icon {
     width: 2.5em; height: 2.5em;
     vertical-align: -0.15em;
@@ -32,10 +38,13 @@ body{
   fill:red;
   transform:scale(1.2);
 }
+.clear{
+  text-align: right;
+}
 #colors{
   position: fixed;
-  top: 80px;
-  left: 20px;
+  top: 90px;
+  left: 18px;
 }
 #colors li{
   width:16px;
@@ -92,3 +101,28 @@ body{
   border: 2px solid #001ba5;
   box-shadow: 0 3px 6px  rgba(129,95,246,.6);
 }
+
+#line{
+  position: fixed;
+  top: 310px;
+  left: 18px;
+}
+#line li{
+  width:20px;
+  height:20px;
+  margin:10px 0;
+  transition:all .4s;
+}
+#line li.active{
+  transform:scale(1.4);
+}
+#line li#big{
+  border-top:6px solid #2e2e2e;
+}
+#line li#middle{
+  border-top:4px solid #2e2e2e;
+}
+#line li#small{
+  border-top:2px solid #2e2e2e;
+}
+

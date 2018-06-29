@@ -1,6 +1,7 @@
 
 var canvas = document.getElementById('canvas')
 var ctx = canvas.getContext('2d')
+var lineWidth = 8
 
 autoSetCanvasSize(canvas)
 listenToMouse(canvas)
@@ -17,6 +18,7 @@ var eraserEnable = false   //橡皮擦画笔切换
     brush.classList.add('active')
     eraser.classList.remove('active')
 }
+
 black.onclick=function(){
   ctx.fillStyle = 'black'
   ctx.strokeStyle = 'black'
@@ -61,6 +63,28 @@ blue.onclick=function(){
   yellow.classList.remove('active')
   green.classList.remove('active')
   blue.classList.add('active')
+}
+clear.onclick=function(){
+  ctx.clearRect(0, 0, canvas.width,canvas.height);
+}
+
+big.onclick=function(){
+  lineWidth = 8
+  big.classList.add('active')
+  middle.classList.remove('active') 
+  small.classList.remove('active')
+}
+middle.onclick=function(){
+  lineWidth = 5
+  big.classList.remove('active')
+  middle.classList.add('active') 
+  small.classList.remove('active')
+}
+small.onclick=function(){
+  lineWidth = 2
+  big.classList.remove('active')
+  middle.classList.remove('active') 
+  small.classList.add('active')
 }
 
 function listenToMouse(canvas){
@@ -142,7 +166,7 @@ function drawPoint(x,y,radius){
 function drawLine(x1,y1,x2,y2){
   ctx.beginPath()
   ctx.moveTo(x1,y1)
-  ctx.lineWidth = 6
+  ctx.lineWidth = lineWidth
   ctx.lineTo(x2,y2)
   ctx.stroke()
   ctx.closePath() 
